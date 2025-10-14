@@ -1,6 +1,6 @@
 ## Listado de eventos
 
-### Implicitos (5)
+### Implicitos
 1. abrir ubicacion de Google Maps.
 2. ver una pagina web especifica.
 3. Enviar correo electronico.
@@ -18,7 +18,7 @@
 
 ## Listado de Pendientes
 
-### Implicitos (5)
+### Implicitos
 - [ ] abrir ubicacion de Google Maps.
 - [X] ver una pagina web especifica.
 - [X] Enviar correo electronico.
