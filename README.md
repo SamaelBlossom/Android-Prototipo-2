@@ -21,7 +21,7 @@
 ### Implicitos (5)
 - [ ] abrir ubicacion de Google Maps.
 - [X] ver una pagina web especifica.
-- [ ] Enviar correo electronico.
+- [X] Enviar correo electronico.
 - [X] Tomar Fotografia con la camara.
 - [ ] Abrir camara frontal.
 
