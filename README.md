@@ -19,14 +19,14 @@
 ## Listado de Pendientes
 
 ### Implicitos (5)
-[] abrir ubicacion de Google Maps.
-[X] ver una pagina web especifica.
-[] Enviar correo electronico.
-[X] Tomar Fotografia con la camara.
-[] Abrir camara frontal.
+- [] abrir ubicacion de Google Maps.
+- [X] ver una pagina web especifica.
+- [] Enviar correo electronico.
+- [X] Tomar Fotografia con la camara.
+- [] Abrir camara frontal.
 
 
 ### Explicitos
-[X] MainActivity → PhotoActivity (mostrar imagen tomada).
-[] MainActivity → ConfigActivity (ajustes).
-[] MainActivity → AyudaActivity (FAQ o tutorial).
+- [X] MainActivity → PhotoActivity (mostrar imagen tomada).
+- [] MainActivity → ConfigActivity (ajustes).
+- [] MainActivity → AyudaActivity (FAQ o tutorial).
