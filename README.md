@@ -2,7 +2,7 @@
 
 ### Implicitos
 1. abrir ubicacion de Google Maps.
-    - **Objetivo:** Usa Activity y almacena la fotografia que quede en la galeria.
+    - **Objetivo:** Muestra una dirección o lugar.
     - **Acción:** geo:lat,lng?q=texto.
 
 2. ver una pagina web especifica.
