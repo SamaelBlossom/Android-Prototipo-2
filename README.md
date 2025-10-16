@@ -41,7 +41,7 @@
 ## Listado de Pendientes
 
 ### Implicitos
-- [ ] abrir ubicacion de Google Maps.
+- [X] abrir ubicacion de Google Maps.
 - [X] ver una pagina web especifica.
 - [X] Enviar correo electronico.
 - [X] Tomar Fotografia con la camara.
