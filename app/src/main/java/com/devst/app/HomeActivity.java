@@ -90,6 +90,8 @@ public class HomeActivity extends AppCompatActivity {
             Intent i = new Intent(HomeActivity.this, PerfilActivity.class);
             i.putExtra("email_usuario", emailUsuario);
             editarPerfilLauncher.launch(i);
+
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         });
 
         // Evento: Intent implícito → abrir web
@@ -160,7 +162,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
         btnMaps.setOnClickListener(v -> {
-            Uri gmmIntentUri = Uri.parse("geo:-33.44889,-70.66926?q=Santo Tomás"); // Coordenadas y búsqueda de ejemplo
+            Uri gmmIntentUri = Uri.parse("geo:-33.4578, -70.6635?q=Instituto Profesional Santo Tomas"); // Coordenadas y búsqueda de ejemplo
             Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
             mapIntent.setPackage("com.google.android.apps.maps"); // Asegura que se abra en Google Maps
             startActivity(mapIntent);
