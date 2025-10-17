@@ -158,6 +158,24 @@
 
             </GridLayout>
 
+            <Button
+                android:id="@+id/btnFoto"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/outline_add_photo_alternate_24"
+                android:text="Abrir foto"
+                android:textColor="@color/text_main"/>
+
+            <ImageView
+                android:id="@+id/imgGaleria"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                android:contentDescription="Imagen seleccionada de la galería" />
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

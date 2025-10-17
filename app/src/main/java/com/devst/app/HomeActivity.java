@@ -12,8 +12,10 @@ import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResultLauncher;
@@ -39,6 +41,7 @@ public class HomeActivity extends AppCompatActivity {
     private CameraManager camara;
     private String camaraID = null;
     private boolean luz = false;
+    private ImageView imgGaleria;
 
     // Activity Result (para recibir datos de PerfilActivity)
     private final ActivityResultLauncher<Intent> editarPerfilLauncher =
@@ -62,6 +65,17 @@ public class HomeActivity extends AppCompatActivity {
                 }
             });
 
+    private final ActivityResultLauncher<String> seleccionarImagenLauncher =
+            registerForActivityResult(new ActivityResultContracts.GetContent(), uri ->{
+                if (uri != null){
+                    imgGaleria.setImageURI(uri);
+                    imgGaleria.setVisibility(View.VISIBLE);
+                    Toast.makeText(this,"Imagen cargada", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "No se selecciono ninguna imagen", Toast.LENGTH_SHORT).show();
+                }
+            });
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,6 +95,8 @@ public class HomeActivity extends AppCompatActivity {
         Button btnCamara = findViewById(R.id.btnCamara);
         Button btnMaps = findViewById(R.id.btnMaps);
         Button btnWifi = findViewById(R.id.btnWifi);
+        Button btnFoto = findViewById(R.id.btnFoto);
+        imgGaleria = findViewById(R.id.imgGaleria);
 
         // Recibir dato del Login
         emailUsuario = getIntent().getStringExtra("email_usuario");
@@ -177,6 +193,10 @@ public class HomeActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "No se puede abrir la configuracion de Wi-fi", Toast.LENGTH_SHORT).show();
             }
+        });
+
+        btnFoto.setOnClickListener(v -> {
+            seleccionarImagenLauncher.launch("image/*");
         });
 
     }
