@@ -17,7 +17,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/brand_primary"
+            android:background="#3C132F"
             android:title="Menú Principal"
             android:titleTextColor="@android:color/white"
             app:titleCentered="true"/>
@@ -60,52 +60,74 @@
                 <!-- Botones -->
                 <Button
                     android:id="@+id/btnIrPerfil"
-                    android:layout_width="match_parent"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Ir a Perfil (resultado)"/>
+                    android:textColor="@color/black"
+                    android:text="Ir a Perfil (resultado)"
+                    android:drawableTop="@drawable/baseline_person_24"
+                    android:drawablePadding="8dp"
+                    style="?android:attr/borderlessButtonStyle"/>
 
                 <Button
                     android:id="@+id/btnAbrirWeb"
-                    android:layout_width="match_parent"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:text="Abrir sitio web"/>
+                    android:text="Abrir sitio web"
+                    android:textColor="@color/black"
+                    android:drawableTop="@drawable/outline_airline_stops_24"
+                    style="?android:attr/borderlessButtonStyle"/>
 
                 <Button
                     android:id="@+id/btnEnviarCorreo"
-                    android:layout_width="match_parent"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:text="Enviar correo"/>
+                    android:text="Enviar correo"
+                    android:textColor="@color/black"
+                    android:drawableTop="@drawable/outline_attach_email_24"
+                    style="?android:attr/borderlessButtonStyle"/>
 
                 <Button
                     android:id="@+id/btnCompartir"
-                    android:layout_width="match_parent"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:text="Compartir texto"/>
+                    android:text="Compartir texto"
+                    android:textColor="@color/black"
+                    android:drawableTop="@drawable/outline_convert_to_text_24"
+                    style="?android:attr/borderlessButtonStyle"/>
 
                 <Button
                     android:id="@+id/btnLinterna"
-                    android:layout_width="match_parent"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:text="Linterna ON/OFF" />
+                    android:text="Linterna ON/OFF"
+                    android:textColor="@color/black"
+                    android:drawableTop="@drawable/outline_backlight_high_24"
+                    style="?android:attr/borderlessButtonStyle"/>
 
                 <Button
                     android:id="@+id/btnCamara"
-                    android:layout_width="match_parent"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:text="Abrir Cámara"
-                    android:layout_marginTop="12dp"/>
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/black"
+                    android:drawableTop="@drawable/outline_camera_24"
+                    style="?android:attr/borderlessButtonStyle"/>
 
                 <Button
                     android:id="@+id/btnMaps"
-                    android:layout_width="match_parent"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
                     android:text="Mapa"
-                    android:layout_marginTop="12dp"/>
+                    android:textColor="@color/black"
+                    android:drawableTop="@drawable/outline_file_map_24"
+                    style="?android:attr/borderlessButtonStyle"/>
 
 
             </LinearLayout>
