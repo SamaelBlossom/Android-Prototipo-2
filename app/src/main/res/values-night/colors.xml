@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand_primary">#409CFF</color>
+    <color name="brand_primary_dark">#007BFF</color>
+    <color name="icon_tint_color">#FFFFFF</color>
+    <color name="header_start_color">#F9772D</color>
+    <color name="header_end_color">#D42E3C</color>
+
+    <color name="app_bg">#121212</color>
+    <color name="surface">#1E1E1E</color>
+    <color name="divider">#2E2E2E</color>
+
+    <color name="text_main">#FFFFFF</color>
+    <color name="text_dim">#AFAFAF</color>
+    <color name="on_primary">#FFFFFF</color>
+</resources>

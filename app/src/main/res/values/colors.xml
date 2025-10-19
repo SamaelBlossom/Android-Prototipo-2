@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="icon_tint_color">#212121</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
+    <color name="header_start_color">#F9772D</color>
+    <color name="header_end_color">#D42E3C</color>
     <color name="app_bg">#F5F7FB</color>
     <color name="brand_primary">#5B86E5</color>
     <color name="brand_primary_dark">#3B5BB5</color>
