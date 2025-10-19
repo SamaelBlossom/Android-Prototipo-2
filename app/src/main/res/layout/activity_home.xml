@@ -17,19 +17,18 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/brand_primary"
+            android:background="#3C132F"
             android:title="Menú Principal"
             android:titleTextColor="@android:color/white"
             app:titleCentered="true"/>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- Contenido desplazable, con padding propio -->
+    <!-- Contenido desplazable -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <!-- Columna simple, centrada y con ancho máximo para que no se estire en tablets -->
         <LinearLayout
             android:id="@+id/content"
             android:layout_width="match_parent"
@@ -38,69 +37,145 @@
             android:padding="16dp"
             android:gravity="center_horizontal">
 
-            <!-- Contenedor para limitar el ancho en pantallas grandes -->
-            <LinearLayout
+            <!-- Título de bienvenida -->
+            <TextView
+                android:id="@+id/tvBienvenida"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center_horizontal"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp">
+                android:text="Bienvenido:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_main"/>
 
-                <!-- Título -->
-                <TextView
-                    android:id="@+id/tvBienvenida"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Bienvenido:"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/text_main"/>
+            <!-- Contenedor de botones en formato de cuadrícula -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:paddingTop="16dp">
 
-                <!-- Botones -->
+                <!-- Fila 1 -->
                 <Button
                     android:id="@+id/btnIrPerfil"
-                    android:layout_width="match_parent"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Ir a Perfil (resultado)"/>
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_margin="4dp"
+                    android:drawableTop="@drawable/baseline_person_24"
+                    android:drawablePadding="8dp"
+                    android:text="Perfil"
+                    android:textColor="@color/text_main" />
 
                 <Button
                     android:id="@+id/btnAbrirWeb"
-                    android:layout_width="match_parent"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="Abrir sitio web"/>
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_margin="4dp"
+                    android:drawableTop="@drawable/outline_airline_stops_24"
+                    android:text="Sitio Web"
+                    android:textColor="@color/text_main" />
 
+                <!-- Fila 2 -->
                 <Button
                     android:id="@+id/btnEnviarCorreo"
-                    android:layout_width="match_parent"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="Enviar correo"/>
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_margin="4dp"
+                    android:drawableTop="@drawable/outline_attach_email_24"
+                    android:text="Correo"
+                    android:textColor="@color/text_main" />
 
                 <Button
                     android:id="@+id/btnCompartir"
-                    android:layout_width="match_parent"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="Compartir texto"/>
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_margin="4dp"
+                    android:drawableTop="@drawable/outline_convert_to_text_24"
+                    android:text="Compartir"
+                    android:textColor="@color/text_main" />
 
+                <!-- Fila 3 -->
                 <Button
                     android:id="@+id/btnLinterna"
-                    android:layout_width="match_parent"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="Linterna ON/OFF" />
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_margin="4dp"
+                    android:drawableTop="@drawable/outline_backlight_high_24"
+                    android:text="Linterna"
+                    android:textColor="@color/text_main" />
 
                 <Button
                     android:id="@+id/btnCamara"
-                    android:layout_width="match_parent"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Abrir Cámara"
-                    android:layout_marginTop="12dp"/>
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_margin="4dp"
+                    android:drawableTop="@drawable/outline_camera_24"
+                    android:text="Cámara"
+                    android:textColor="@color/text_main" />
 
-            </LinearLayout>
+                <!-- Fila 4 -->
+                <Button
+                    android:id="@+id/btnMaps"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_margin="4dp"
+                    android:drawableTop="@drawable/outline_file_map_24"
+                    android:text="Mapa"
+                    android:textColor="@color/text_main" />
+
+                <!-- (Añade aquí tu botón de WiFi o cualquier otro) -->
+                <Button
+                    android:id="@+id/btnWifi"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_margin="4dp"
+                    android:drawableTop="@drawable/outline_android_wifi_3_bar_24"
+                    android:text="WiFi"
+                    android:textColor="@color/text_main" />
+
+            </GridLayout>
+
+            <Button
+                android:id="@+id/btnFoto"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/outline_add_photo_alternate_24"
+                android:text="Abrir foto"
+                android:textColor="@color/text_main"/>
+
+            <ImageView
+                android:id="@+id/imgGaleria"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                android:contentDescription="Imagen seleccionada de la galería" />
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
