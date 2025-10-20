@@ -78,6 +78,7 @@ public class HomeActivity extends AppCompatActivity {
         Button btnCompartir = findViewById(R.id.btnCompartir);
         btnLinterna = findViewById(R.id.btnLinterna);
         Button btnCamara = findViewById(R.id.btnCamara);
+        Button btnMaps = findViewById(R.id.btnMaps);
 
         // Recibir dato del Login
         emailUsuario = getIntent().getStringExtra("email_usuario");
@@ -156,6 +157,13 @@ public class HomeActivity extends AppCompatActivity {
         btnCamara.setOnClickListener(v ->
                 startActivity(new Intent(this, CamaraActivity.class))
         );
+
+        btnMaps.setOnClickListener(v -> {
+            Uri gmmIntentUri = Uri.parse("geo:-33.4578, -70.6635?q=Instituto Profesional Santo Tomas"); // Coordenadas y búsqueda de ejemplo
+            Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+            mapIntent.setPackage("com.google.android.apps.maps"); // Asegura que se abra en Google Maps
+            startActivity(mapIntent);
+        });
 
     }
 
