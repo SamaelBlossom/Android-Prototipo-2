@@ -54,7 +54,6 @@
                 android:columnCount="2"
                 android:paddingTop="16dp">
 
-                <!-- Fila 1 -->
                 <Button
                     android:id="@+id/btnIrPerfil"
                     style="?android:attr/borderlessButtonStyle"
@@ -80,7 +79,6 @@
                     android:text="Sitio Web"
                     android:textColor="@color/text_main" />
 
-                <!-- Fila 2 -->
                 <Button
                     android:id="@+id/btnEnviarCorreo"
                     style="?android:attr/borderlessButtonStyle"
@@ -105,7 +103,6 @@
                     android:text="Compartir"
                     android:textColor="@color/text_main" />
 
-                <!-- Fila 3 -->
                 <Button
                     android:id="@+id/btnLinterna"
                     style="?android:attr/borderlessButtonStyle"
@@ -130,9 +127,17 @@
                     android:text="Cámara"
                     android:textColor="@color/text_main" />
 
-                <!-- Fila 4 -->
-
-                <!-- (Añade aquí tu botón de WiFi o cualquier otro) -->
+                <Button
+                    android:id="@+id/btnWifi"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_margin="4dp"
+                    android:drawableTop="@drawable/outline_android_wifi_3_bar_24"
+                    android:text="WiFi"
+                    android:textColor="@color/text_main" />
 
             </GridLayout>
 

@@ -8,6 +8,7 @@ import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -78,6 +79,7 @@ public class HomeActivity extends AppCompatActivity {
         Button btnCompartir = findViewById(R.id.btnCompartir);
         btnLinterna = findViewById(R.id.btnLinterna);
         Button btnCamara = findViewById(R.id.btnCamara);
+        Button btnWifi = findViewById(R.id.btnWifi);
 
         // Recibir dato del Login
         emailUsuario = getIntent().getStringExtra("email_usuario");
@@ -157,6 +159,15 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(this, CamaraActivity.class))
         );
 
+        btnWifi.setOnClickListener(v -> {
+            Intent intentWifi = new Intent(Settings.ACTION_WIFI_SETTINGS);
+            if (intentWifi.resolveActivity(getPackageManager()) != null){
+                startActivity(intentWifi);
+            }else{
+                Toast.makeText(this, "No se pudo abrir la configuracion de Wifi", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     //Linterna
@@ -182,15 +193,6 @@ public class HomeActivity extends AppCompatActivity {
             } catch (CameraAccessException ignored) {}
         }
     }
-
-
-
-
-
-
-
-
-
 
 
 
