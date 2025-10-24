@@ -27,15 +27,16 @@ public class ConfigActivity extends AppCompatActivity {
 
         tvEnviarSms.setOnClickListener(v -> {
             String numeroTelefonico = "+56942137877";
+            String mensaje = "Hola, necesito ayuda con la aplicación.";
 
             Intent intentSms = new Intent(Intent.ACTION_SENDTO);
             intentSms.setData(Uri.parse("smsto:" + numeroTelefonico));
-            intentSms.putExtra("smsbody", "Hola, necesito ayuda con la aplicación.");
+            intentSms.putExtra("sms_body", mensaje);
 
-            if (intentSms.resolveActivity(getPackageManager()) != null){
+            try {
                 startActivity(intentSms);
-            }else{
-                Toast.makeText(this,"No se encontró una aplicación de mensajería.", Toast.LENGTH_SHORT).show();
+            } catch (Exception e) {
+                Toast.makeText(this, "No se pudo abrir la app de mensajes", Toast.LENGTH_SHORT).show();
             }
         });
 
