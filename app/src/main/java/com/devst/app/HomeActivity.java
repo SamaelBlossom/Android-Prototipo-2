@@ -89,6 +89,8 @@ public class HomeActivity extends AppCompatActivity {
             Intent i = new Intent(HomeActivity.this, PerfilActivity.class);
             i.putExtra("email_usuario", emailUsuario);
             editarPerfilLauncher.launch(i);
+
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         });
 
         // Evento: Intent implícito → abrir web
