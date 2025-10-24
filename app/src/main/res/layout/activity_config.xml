@@ -54,7 +54,6 @@
                 android:text="Sonido de notificación"
                 android:textSize="16sp"
                 android:gravity="center_vertical"
-                android:drawableEnd="@drawable/baseline_arrow_forward_ios_24"
                 android:clickable="true"
                 android:focusable="true"
                 android:background="?attr/selectableItemBackground"
