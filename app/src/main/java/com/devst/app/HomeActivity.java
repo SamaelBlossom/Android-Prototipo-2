@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
+import android.view.View;
 
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -38,6 +40,7 @@ public class HomeActivity extends AppCompatActivity {
     private CameraManager camara;
     private String camaraID = null;
     private boolean luz = false;
+    private ImageView imgGaleria;
 
     // Activity Result (para recibir datos de PerfilActivity)
     private final ActivityResultLauncher<Intent> editarPerfilLauncher =
@@ -61,6 +64,17 @@ public class HomeActivity extends AppCompatActivity {
                 }
             });
 
+    private final ActivityResultLauncher<String> seleccionarImagenLauncher =
+            registerForActivityResult(new ActivityResultContracts.GetContent(), uri ->{
+                if (uri != null){
+                    imgGaleria.setImageURI(uri);
+                    imgGaleria.setVisibility(View.VISIBLE);
+                    Toast.makeText(this,"Imagen cargada", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "No se selecciono ninguna imagen", Toast.LENGTH_SHORT).show();
+                }
+            });
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +92,8 @@ public class HomeActivity extends AppCompatActivity {
         Button btnCompartir = findViewById(R.id.btnCompartir);
         btnLinterna = findViewById(R.id.btnLinterna);
         Button btnCamara = findViewById(R.id.btnCamara);
+        Button btnFoto = findViewById(R.id.btnFoto);
+        imgGaleria = findViewById(R.id.imgGaleria);
 
         // Recibir dato del Login
         emailUsuario = getIntent().getStringExtra("email_usuario");
@@ -156,6 +172,10 @@ public class HomeActivity extends AppCompatActivity {
         btnCamara.setOnClickListener(v ->
                 startActivity(new Intent(this, CamaraActivity.class))
         );
+
+        btnFoto.setOnClickListener(v -> {
+            seleccionarImagenLauncher.launch("image/*");
+        });
 
     }
 
