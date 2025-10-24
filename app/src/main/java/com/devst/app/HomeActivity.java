@@ -97,6 +97,7 @@ public class HomeActivity extends AppCompatActivity {
         imgGaleria = findViewById(R.id.imgGaleria);
         Button btnWifi = findViewById(R.id.btnWifi);
         Button btnMaps = findViewById(R.id.btnMaps);
+        Button btnConfig = findViewById(R.id.btnConfiguracion);
 
         // Recibir dato del Login
         emailUsuario = getIntent().getStringExtra("email_usuario");
@@ -116,6 +117,7 @@ public class HomeActivity extends AppCompatActivity {
             Intent viewWeb = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(viewWeb);
         });
+
         // Evento: Intent implícito → enviar correo
         btnEnviarCorreo.setOnClickListener(v -> {
             Intent email = new Intent(Intent.ACTION_SENDTO);
@@ -195,6 +197,12 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(mapIntent);
         });
 
+        btnConfig.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, ConfigActivity.class);
+            startActivity(intent);
+        });
+
+
     }
 
     //Linterna
@@ -220,6 +228,15 @@ public class HomeActivity extends AppCompatActivity {
             } catch (CameraAccessException ignored) {}
         }
     }
+
+
+
+
+
+
+
+
+
 
 
 

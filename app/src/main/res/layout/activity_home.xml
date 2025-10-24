@@ -54,6 +54,7 @@
                 android:columnCount="2"
                 android:paddingTop="16dp">
 
+                <!-- Fila 1 -->
                 <Button
                     android:id="@+id/btnIrPerfil"
                     style="?android:attr/borderlessButtonStyle"
@@ -79,6 +80,7 @@
                     android:text="Sitio Web"
                     android:textColor="@color/text_main" />
 
+                <!-- Fila 2 -->
                 <Button
                     android:id="@+id/btnEnviarCorreo"
                     style="?android:attr/borderlessButtonStyle"
@@ -103,6 +105,7 @@
                     android:text="Compartir"
                     android:textColor="@color/text_main" />
 
+                <!-- Fila 3 -->
                 <Button
                     android:id="@+id/btnLinterna"
                     style="?android:attr/borderlessButtonStyle"
@@ -138,6 +141,18 @@
                     android:drawableTop="@drawable/outline_android_wifi_3_bar_24"
                     android:text="WiFi"
                     android:textColor="@color/text_main" />
+                <Button
+                    android:id="@+id/btnConfiguracion"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_margin="4dp"
+                    android:drawableTop="@drawable/baseline_settings_24"
+                    android:text="Configuracion"
+                    android:textColor="@color/text_main" />
+
                 <!-- Fila 4 -->
                 <Button
                     android:id="@+id/btnMaps"
