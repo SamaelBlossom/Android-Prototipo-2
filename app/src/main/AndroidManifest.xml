@@ -17,6 +17,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App">
         <activity
+            android:name=".ConfigActivity"
+            android:exported="false"
+            android:parentActivityName=".HomeActivity"/>
+        <activity
             android:name=".CamaraActivity"
             android:exported="false" />
         <activity

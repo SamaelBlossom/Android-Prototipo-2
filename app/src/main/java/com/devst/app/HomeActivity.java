@@ -78,6 +78,7 @@ public class HomeActivity extends AppCompatActivity {
         Button btnCompartir = findViewById(R.id.btnCompartir);
         btnLinterna = findViewById(R.id.btnLinterna);
         Button btnCamara = findViewById(R.id.btnCamara);
+        Button btnConfig = findViewById(R.id.btnConfiguracion);
 
         // Recibir dato del Login
         emailUsuario = getIntent().getStringExtra("email_usuario");
@@ -156,6 +157,12 @@ public class HomeActivity extends AppCompatActivity {
         btnCamara.setOnClickListener(v ->
                 startActivity(new Intent(this, CamaraActivity.class))
         );
+
+        btnConfig.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, ConfigActivity.class);
+            startActivity(intent);
+        });
+
 
     }
 
