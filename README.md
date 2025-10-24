@@ -142,7 +142,7 @@ Este prototipo educativo, programado en Java para Android, ilustra el uso de mú
 
 Puedes descargar la última versión de la app desde el siguiente enlace:
 
-[🔗 Descargar APK](readme-elements/app-debug.apk)
+[🔗 Descargar APK](/readme-elements/app-debug.apk)
 
 
 
