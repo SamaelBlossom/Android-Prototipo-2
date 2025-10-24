@@ -116,14 +116,13 @@ public class HomeActivity extends AppCompatActivity {
             Intent viewWeb = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(viewWeb);
         });
-
         // Evento: Intent implícito → enviar correo
         btnEnviarCorreo.setOnClickListener(v -> {
             Intent email = new Intent(Intent.ACTION_SENDTO);
-            email.setData(Uri.parse("mailto:")); // Solo apps de correo
+            email.setData(Uri.parse("mailto:"));
             email.putExtra(Intent.EXTRA_EMAIL, new String[]{emailUsuario});
-            email.putExtra(Intent.EXTRA_SUBJECT, "Prueba desde la app");
-            email.putExtra(Intent.EXTRA_TEXT, "Hola, esto es un intento de correo.");
+            email.putExtra(Intent.EXTRA_SUBJECT, "Esto es una prueba");
+            email.putExtra(Intent.EXTRA_TEXT, "HOLAAA, esto una prueba para mandar correo");
             startActivity(Intent.createChooser(email, "Enviar correo con:"));
         });
 
