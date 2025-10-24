@@ -96,6 +96,7 @@ public class HomeActivity extends AppCompatActivity {
         Button btnFoto = findViewById(R.id.btnFoto);
         imgGaleria = findViewById(R.id.imgGaleria);
         Button btnWifi = findViewById(R.id.btnWifi);
+        Button btnMaps = findViewById(R.id.btnMaps);
 
         // Recibir dato del Login
         emailUsuario = getIntent().getStringExtra("email_usuario");
@@ -111,7 +112,7 @@ public class HomeActivity extends AppCompatActivity {
 
         // Evento: Intent implícito → abrir web
         btnAbrirWeb.setOnClickListener(v -> {
-            Uri uri = Uri.parse("https://github.com/SamaelBlossom/Android-Prototipo-2");
+            Uri uri = Uri.parse("https://www.santotomas.cl");
             Intent viewWeb = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(viewWeb);
         });
@@ -186,6 +187,13 @@ public class HomeActivity extends AppCompatActivity {
             }else{
                 Toast.makeText(this, "No se pudo abrir la configuracion de Wifi", Toast.LENGTH_SHORT).show();
             }
+        });
+
+        btnMaps.setOnClickListener(v -> {
+            Uri gmmIntentUri = Uri.parse("geo:-33.4578, -70.6635?q=Instituto Profesional Santo Tomas"); // Coordenadas y búsqueda de ejemplo
+            Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+            mapIntent.setPackage("com.google.android.apps.maps"); // Asegura que se abra en Google Maps
+            startActivity(mapIntent);
         });
 
     }

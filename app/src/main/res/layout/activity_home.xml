@@ -138,6 +138,20 @@
                     android:drawableTop="@drawable/outline_android_wifi_3_bar_24"
                     android:text="WiFi"
                     android:textColor="@color/text_main" />
+                <!-- Fila 4 -->
+                <Button
+                    android:id="@+id/btnMaps"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_margin="4dp"
+                    android:drawableTop="@drawable/outline_file_map_24"
+                    android:text="Mapa"
+                    android:textColor="@color/text_main" />
+
+                <!-- (Añade aquí tu botón de WiFi o cualquier otro) -->
 
             </GridLayout>
 
