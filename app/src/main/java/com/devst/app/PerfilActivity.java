@@ -29,7 +29,6 @@ public class PerfilActivity extends AppCompatActivity {
 
 
         btnGuardarPerfil.setOnClickListener(v -> {
-            // Se llama al método que hemos creado para actualizar el nombre.
             actualizarNombre();
         });
     }
