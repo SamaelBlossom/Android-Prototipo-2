@@ -121,7 +121,7 @@ Este prototipo educativo, programado en Java para Android, ilustra el uso de mú
 
 ## 🖼️ Capturas de Pantalla
 
-- ![Login](/readme-elements/login.jpeg)📍
+- <img src="/readme-elements/login.jpeg" alt="Captura Login" width="350"/>
 - ![Captura 2](ruta/a/imagen2.png) 🌐
 - ![Captura 3](ruta/a/imagen3.png) 📷
 - ![Captura 4](ruta/a/imagen4.png) ⚙️
