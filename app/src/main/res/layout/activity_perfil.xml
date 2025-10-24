@@ -36,12 +36,6 @@
         android:text="usuario@st.cl"
         android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="24dp"
-        android:background="?android:attr/listDivider" />
-
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,12 +57,5 @@
         android:layout_marginTop="16dp"
         android:text="Guardar Cambios" />
 
-    <Button
-        android:id="@+id/btnNotificarHome"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Notificar a Home" />
 
 </LinearLayout>
