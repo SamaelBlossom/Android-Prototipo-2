@@ -140,6 +140,7 @@ Este prototipo educativo, programado en Java para Android, ilustra el uso de mú
 
 ## 📦 APK
 
+[Descargar última versión]([apk/app-release.apk](/readme-elements/app-debug.apk)
 
 
 ---
